@@ -1,0 +1,60 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+#header {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+h1 {
+  font-size: 40px;
+  font-weight: 300;
+  text-align: center;
+}
+h2 {
+  font-size: 25px;
+  font-weight: 300;
+}
+h3 {
+    font-size: 20px;
+    font-weight: 300;
+}
+.sec {
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.tt {
+  color: #060;
+  display: inline-block;
+}
+
+#inputlayer {
+  width: 65px;
+}
+.layer {
+  width: 35px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+.actmap {
+  display: block;
+  border: 2px solid #FFF;
+}
+.sechighlight {
+  background-color: #F7F6F4;
+}
+#footermsg {
+  color: #333;
+  margin: 20px;
+}
+#classicons {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}

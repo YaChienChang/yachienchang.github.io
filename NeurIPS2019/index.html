@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neural Lyapunov Control</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+  <!-- Google fonts -->
+  <link href="../css/google-fonts.css" rel="stylesheet" type="text/css">
+  <!-- Google Analytics -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+<body onload="page_loaded()">
+
+<div id="header">
+  <h1><b>Neural Lyapunov Control</b></h1>
+  <center>
+      <br>
+      <nobr>Ya-Chien Chang<nobr>, <nobr>Nima Roohi</nobr>, and <nobr>Sicun Gao</nobr>
+      <br>
+      <nobr>University of California, San Diego</nobr>
+  </center>
+  <div style="clear:both;"></div>
+</div>
+
+<div class="sechighlight">
+<div class="container sec">
+  <h2>Abstract</h2>
+  We propose new methods for learning control policies and neural network Lyapunov functions for nonlinear control problems, with provable guarantee of stability. The framework consists of a learner that attempts to find the control and Lyapunov functions, and a falsifier that finds counterexamples to quickly guide the learner towards solutions. The procedure terminates when no counterexample is found by the falsifier, in which case the controlled nonlinear system is provably stable. The approach significantly simplifies the process of Lyapunov control design, provides end-to-end correctness guarantee, and can obtain much larger regions of attraction than existing methods such as LQR and SOS/SDP. We show experiments on how the new methods obtain high-quality solutions for challenging robot control problems such as humanoid robot balancing and wheeled vehicle path-following.
+
+</div>
+</div>
+
+<div class="container sec">
+    <div class='row'>
+        <div class='col-xs-6'>
+        <h2>Overall algorithm: </h2>
+        </div>
+        <div class='col-xs-6'>
+            <h2>Humanoid balance with learned controller: </h2>
+            </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-xs-6'>
+        <img style="width: 100%; height: 100%" src='img/2019.png'>
+            </div>
+            <div class='col-xs-6'>
+<!--                    <iframe width="560" height="315" src="img/3-link-balancing.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen> </iframe>-->
+            <div class="headerVideo embed-responsive embed-responsive-16by9">
+                <iframe class="embed-responsive-item" src="img/3-link-balancing.mp4" allowfullscreen></iframe>
+            </div>
+            </div>
+                </div>
+
+    </div>
+</div>
+
+<div class="container sec">
+    <h2>Example Results: </h2>
+    <div class='row'>
+       <div class='col-xs-6'>
+           <h3>Inverted pendulum: </h3>
+           
+               <div class='row'>
+                 <div class='col-xs-6'>
+                   <img style="width: 100%; height: 100%" src='img/IP_V.png'>
+                 </div>
+           
+                 <div class='col-xs-6'>
+                   <img style="width: 120%; height: 120%" src='img/IP_R.png'>
+                 </div>
+               </div>
+        </div>
+      <div class='col-xs-6'>
+          <h3>Path tracking: </h3>
+          
+          <div class='row'>
+              <div class='col-xs-6'>
+                  <img style="width: 100%; height: 100%" src='img/Path_V.png'>
+                      </div>
+              
+              <div class='col-xs-6'>
+                  <img style="width: 120%; height: 120%" src='img/Path_R.png'>
+                      </div>
+          </div>
+         </div>
+        </div>
+    <div class='row'>
+        <div class='col-xs-6'>
+            <h3>Caltech ducted fan in hover mode: </h3>
+            
+            <div class='row'>
+                <div class='col-xs-6'>
+                    <img style="width: 100%; height: 100%" src='img/Fan_V.png'>
+                        </div>
+                
+                <div class='col-xs-6'>
+                    <img style="width: 120%; height: 120%" src='img/Fan_R.png'>
+                        </div>
+            </div>
+        </div>
+        <div class='col-xs-6'>
+            <h3>Humanoid balance: </h3>
+            
+            <div class='row'>
+                <div class='col-xs-6'>
+                    <img style="width: 100%; height: 100%" src='img/Acro_V.png'>
+                        </div>
+                
+                <div class='col-xs-6'>
+                    <img style="width: 120%; height: 120%" src='img/Acro_R.png'>
+                        </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+
+<div class="sechighlight">
+<div class="container sec" style="font-size:18px">
+  <div class="row">
+      <h2>Bibtex</h2>
+<pre style="font-size:11px; background-color: #E5E3DD">
+@inproceedings{
+    title={Neural Lyapunov Control},
+    author={Ya-Chien Chang, Nima Roohi, and Sicun Gao},
+    booktitle={NeurIPS},
+    year={2019}
+}
+</pre>
+    </div>
+  </div>
+</div>
+</div>
+
+
+</body></html>
