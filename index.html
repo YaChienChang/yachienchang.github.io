@@ -1,0 +1,135 @@
+<html>
+  <head>
+    <title>Ya-Chien Chang</title>
+    <script src='js/jquery-1.11.2.min.js'></script>
+    <script src='js/bootstrap.min.js'></script>
+    <link href='css/bootstrap.min.css' rel='stylesheet'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,900,100italic,100,300,300italic,400italic,500italic,900italic,700italic' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            font-family: 'sans-serif';
+            font-size: 20px;
+            background-color: #FFFCF4;
+            color: #4F6071;
+        }
+        .color1 {
+            background-color: #CCC;
+        }
+        #header {
+            width: 100%;
+            height: 360px;
+            background-color: #C0BBAB
+            /* background-color: #b30000; */
+            /* background-color: #CCC; */
+        }
+      #header-inner {
+        position: absolute;
+        width: 70%;
+        left: 30%;
+        top: 150px;
+      }
+      .img-me {
+        border: 0;
+        float: left;
+        height: 200px;
+      }
+      .header-text {
+        margin-top: 60px;
+        margin-left: 220px;
+      }
+      .header-text-name {
+        font-weight: bold;
+        font-size: 40px;
+      }
+      .header-text-email {
+        font-size: 20px;
+        font-style: italic;
+      }
+      .header-text-desc {
+        font-size: 20px;
+      }
+      #contact-info {
+        position: absolute;
+        left: 80%;
+        width: 20%;
+        top: 360px;
+        height: 100px;
+        background-color: #EEE;
+      }
+      .vspace {
+        margin-bottom: 20px;
+      }
+      .vspace-top {
+        margin-top: 30px;
+      }
+      .paper-image {
+        width: 200px;
+      }
+      .paper-title {
+        font-weight: bold;
+      }
+      .paper-authors {
+        font-style: italic;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <div id='header'>
+      <div id='header-inner'>
+        <img src='images/me.jpg' class='img-circle img-me'>
+        <div class='header-text'>
+          <div class='header-text-name'>
+            Ya-Chien Chang
+          </div>
+          <div class='header-text-email'>
+            yac021 at ucsd dot eng dot edu
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='container'>
+      <div class='col-xs-10 col-md-offset-1'>
+        <div class='row'>
+          <h1>About Me</h1>
+          <div class='vspace'>
+            I am a first year PhD student in Computer Science and Engineering Department at UC San Diego. My advisor is Professor <a href="http://scungao.github.io/" target="_blank">Sicun Gao</a>, and we are currently working on control and planning problems in robotics. I received my master degree in Applied Mathematics from National Tsing-Hua University. My master thesis focus on analyzing the stability of dynamical systems in mathematical biology.
+          </div>
+        
+        </div>
+        <div class='row'>
+        <h1>Research Interests</h1>
+        <div class='vspace'>
+        Robotics, Nonliear Dynamical Systems and Control.
+        </div>
+
+        </div>
+        <div class='row'>
+          <h1>Publications</h1>
+
+          <div class='row vspace-top'>
+            <div class='col-xs-3 text-center'>
+              <img class='paper-image' src='images/2019.png'>
+            </div>
+            <div class='col-xs-9'>
+              <div class='paper-title'>
+                Neural Lyapunov Control
+              </div>
+              <div class='paper-authors'>
+                <b>Ya-Chien Chang</b>, Nima Roohi, and Sicun Gao
+              </div>
+              <div>
+                NeurIPS (Conference on Neural Information Processing Systems) 2019
+              </div>
+              <div>
+                <a href=" ">[PDF]</a>
+                <a href="https://yachienchang.github.io/NeurIPS2019/index.html">[Project Page]</a>
+                <a href="https://github.com/YaChienChang/Neural-Lyapunov-Control">[Code]</a>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
