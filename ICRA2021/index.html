@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Co/Users/vanessa/Documents/yachienchang.github.io/ICRA2021/style.cssmpatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lyapunov Critics</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+  <!-- Google fonts -->
+  <link href="../css/google-fonts.css" rel="stylesheet" type="text/css">
+  <!-- Google Analytics -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+<body onload="page_loaded()">
+
+<div id="header">
+  <h1><b>Stabilizing Neural Control Using Self-Learned Almost Lyapunov Critics</b></h1>
+  <center>
+      <br>
+      <h4><nobr>Ya-Chien Chang</nobr> and <nobr>Sicun Gao</nobr></h4>
+      <br>
+      <nobr>University of California, San Diego</nobr>
+  </center>
+  <div style="clear:both;"></div>
+</div>
+
+<div class="sechighlight">
+<div class="container sec">
+  <h2>Abstract</h2>
+  The lack of stability guarantee restricts the practical use of learning-based methods in core control problems in robotics. We develop new methods for learning neural control policies and neural Lyapunov critic functions in the model-free reinforcement learning (RL) setting. We use sample-based approaches and the Almost Lyapunov function conditions to estimate the region of attraction and invariance properties through the learned Lyapunov critic functions. The methods enhance stability of neural controllers for various nonlinear systems including automobile and quadrotor control.
+</div>
+</div>
+
+<div class="container sec">
+    <div class='row'>
+        <h2>Overall algorithm: </h2>
+    </div>
+
+    <div class='row'>
+        <img style="width: 100%; height: 100%" src='img/approach.png'>
+    </div>
+</div>
+
+<div class='row text-center' style='color:#8b8472'>
+    <strong>Published in ICRA 2021</strong> <a href="paper/ICRA21_1516_FI.pdf " target="_blank">[Paper]</a> <a href=" " target="_blank">[Code coming soon!]</a>
+</div>
+
+<div class="container sec">
+<h2>Results: </h2>
+<center><h3><b>Inverted Pendulum</b></h3></center>
+
+<div class='row'>
+    <div class='col-xs-4'>
+    <h3>SAC </h3>
+    </div>
+    <div class='col-xs-4'>
+        <h3>PPO </h3>
+    </div>
+    <div class='col-xs-4'>
+        <h3>LY (with neural Lyapunov critics) </h3>
+    </div>
+</div>
+
+<div class='row'>
+    <div class='col-xs-4'>
+        <div class="headerVideo embed-responsive embed-responsive-4by3">
+            <iframe class="embed-responsive-item" src="img/P_SAC_90deg.mp4" allowfullscreen allow=autoplay ></iframe>
+        </div>
+    </div>
+    <div class='col-xs-4'>
+        <div class="headerVideo embed-responsive embed-responsive-4by3">
+            <iframe class="embed-responsive-item" src="img/P_PPO_90deg.mp4" allowfullscreen allow=autoplay ></iframe>
+        </div>
+    </div>
+    <div class='col-xs-4'>
+        <div class="headerVideo embed-responsive embed-responsive-4by3">
+            <iframe class="embed-responsive-item" src="img/P_LY_90deg.mp4" allowfullscreen allow=autoplay ></iframe>
+        </div>
+    </div>
+</div>
+<br>
+
+<center><h3><b>Walker</b></h3></center>
+
+<div class='row'>
+    <div class='col-xs-4'>
+    <h3>SAC </h3>
+    </div>
+    <div class='col-xs-4'>
+        <h3>PPO </h3>
+    </div>
+    <div class='col-xs-4'>
+        <h3>LY (with neural Lyapunov critics) </h3>
+    </div>
+</div>
+
+<div class='row'>
+    <div class='col-xs-4'>
+        <div class="headerVideo embed-responsive embed-responsive-4by3">
+            <iframe class="embed-responsive-item" src="img/W_SAC.mp4" allowfullscreen allow=autoplay ></iframe>
+        </div>
+    </div>
+    <div class='col-xs-4'>
+        <div class="headerVideo embed-responsive embed-responsive-4by3">
+            <iframe class="embed-responsive-item" src="img/W_PPO.mp4" allowfullscreen allow=autoplay ></iframe>
+        </div>
+    </div>
+    <div class='col-xs-4'>
+        <div class="headerVideo embed-responsive embed-responsive-4by3">
+            <iframe class="embed-responsive-item" src="img/W_LY.mp4" allowfullscreen allow=autoplay ></iframe>
+        </div>
+    </div>
+</div>
+
+<br>
+<center><h3><b>Quadrotor control</b></h3></center>
+
+<div class='row'>
+    <div class='col-xs-4'>
+    <h3>SAC </h3>
+    </div>
+    <div class='col-xs-4'>
+        <h3>PPO </h3>
+    </div>
+    <div class='col-xs-4'>
+        <h3>LY (with neural Lyapunov critics) </h3>
+    </div>
+</div>
+
+<div class='row'>
+    <div class='col-xs-4'>
+        <img style="width: 100%; height: 100%" src='img/D_SAC.png'>
+    </div>
+    <div class='col-xs-4'>
+        <img style="width: 100%; height: 100%" src='img/D_PPO.png'>
+    </div>
+    <div class='col-xs-4'>
+        <img style="width: 100%; height: 100%" src='img/D_LY.png'>
+        </div>
+    </div>
+
+<br>
+<center><h3><b>Path-tracking control</b></h3></center>
+<center><h3>( In training environment )</h3></center>
+<div class='row'>
+    <div class='col-xs-4'>
+    <h3>SAC </h3>
+    </div>
+    <div class='col-xs-4'>
+        <h3>PPO </h3>
+    </div>
+    <div class='col-xs-4'>
+        <h3>LY (with neural Lyapunov critics) </h3>
+    </div>
+</div>
+
+<div class='row'>
+    <div class='col-xs-4'>
+        <img style="width: 100%; height: 100%" src='img/C_SAC_training.png'>
+    </div>
+    <div class='col-xs-4'>
+        <img style="width: 100%; height: 100%" src='img/C_PPO_training.png'>
+    </div>
+    <div class='col-xs-4'>
+        <img style="width: 100%; height: 100%" src='img/C_LY_training.png'>
+        </div>
+    </div>
+
+<center><h3>( In testing environment )</h3></center>
+<div class='row'>
+    <div class='col-xs-4'>
+    <h3>SAC </h3>
+    </div>
+    <div class='col-xs-4'>
+        <h3>PPO </h3>
+    </div>
+    <div class='col-xs-4'>
+        <h3>LY (with neural Lyapunov critics) </h3>
+    </div>
+</div>
+
+<div class='row'>
+<div class='col-xs-4'>
+    <img style="width: 100%; height: 100%" src='img/C_SAC_testing.png'>
+</div>
+<div class='col-xs-4'>
+    <img style="width: 100%; height: 100%" src='img/C_PPO_testing.png'>
+</div>
+<div class='col-xs-4'>
+    <img style="width: 100%; height: 100%" src='img/C_LY_testing.png'>
+    </div>
+</div>
+
+
+
+
+
+
+</div>
+
+
+<div class="sechighlight">
+<div class="container sec" style="font-size:18px">
+  <div class="row">
+      <h2>Bibtex</h2>
+<pre style="font-size:11px; background-color: #E5E3DD">
+@inproceedings{
+    title={Stabilizing Neural Control Using Self-Learned Almost Lyapunov Critics},
+    author={Ya-Chien Chang and Sicun Gao},
+    booktitle={ICRA},
+    year={2021}
+}
+</pre>
+    </div>
+  </div>
+</div>
+</div>
+
+
+</body></html>
