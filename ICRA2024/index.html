@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+    <meta http-equiv="X-UA-Co/Users/vanessa/Documents/yachienchang.github.io/ICRA2024/style.cssmpatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Extremum-Seeking Action Selection</title>
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+  <!-- Google fonts -->
+  <link href="../css/google-fonts.css" rel="stylesheet" type="text/css">
+  <!-- Google Analytics -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+<body onload="page_loaded()">
+
+<div id="header">
+  <h1><b>Extremum-Seeking Action Selection for Accelerating Policy Optimization</b></h1>
+  <center>
+      <br>
+      <h4><nobr>Ya-Chien Chang</nobr> and <nobr>Sicun Gao</nobr></h4>
+      <br>
+      <nobr>University of California, San Diego</nobr>
+  </center>
+  <div style="clear:both;"></div>
+</div>
+
+<div class="sechighlight">
+<div class="container sec">
+  <h2>Abstract</h2>
+  Reinforcement learning for control over continuous spaces typically uses high-entropy stochastic policies, such as Gaussian distributions, for local exploration and estimating policy gradient to optimize performance. Many robotic control problems deal with complex unstable dynamics, where applying actions that are off the feasible control manifolds can quickly lead to undesirable divergence. In such cases, most samples taken from the ambient action space generate low-value trajectories that hardly contribute to policy improvement, resulting in slow or failed learning. We propose to improve action selection in this model-free RL setting by introducing additional adaptive control steps based on Extremum-Seeking Control (ESC). On each action sampled from stochastic policies, we apply sinusoidal perturbations and query for estimated Q-values as the response signal. Based on ESC, we then dynamically improve the sampled actions to be closer to nearby optima before applying them to the environment. Our methods can be easily added in standard policy optimization to improve learning efficiency, which we demonstrate in various control learning environments.
+</div>
+</div>
+
+<div class='row text-center' style='color:#8b8472'>
+    <strong>Published in ICRA 2024</strong> <a href="paper/ICRA_24_ESA.pdf " target="_blank">[Paper]</a>
+</div>
+
+<div class="container sec">
+    <div class='row'>
+        <h2>Overall Algorithm:</h2>
+    </div>
+    <center><h5>Extremum-Seeking Action Selection (ESA) in Reinforcement Learning</h5></center>
+    <div class='row' style="display: flex; justify-content: center; align-items: center;">
+        <img style="width: 55%; height: 55%" src='img/overview.png'>
+    </div>
+</div>
+
+<div class="container sec">
+    <h2>Benefits of High-Pass Filtering:</h2>
+    <div class='row' style="display: flex; justify-content: left; align-items: left;">
+        <p style="margin-bottom: 30px;">
+            High-pass filters remove "flat" regions in the Q-value landscape, making it easier to locate actions that lead to local peak Q-values. <br> In the figure below, high-pass filters enhance the visibility of peaks, enabling faster local improvement towards the optimum.
+        </p>
+    </div>
+    <div style="flex: 1; text-align: center;">
+        <img style="width: 50%; height: 50%" src='img/HPF.png' alt="High-pass filters illustration">
+        <p style="text-align: center; margin-top: 10px;">
+            An illustration of the effect of using high-pass filters on the <br> Q-value landscapes in the inverted pendulum environment.
+        </p>
+    </div>
+</div>
+
+
+<div class="container sec">
+    <h2>Overall Performance:</h2>
+    <div class='row'>
+        <div class='col-xs-3'>
+        <h3> Inverted Pendulum </h3>
+        </div>
+        <div class='col-xs-3'>
+            <h3> Quadrotor Control </h3>
+        </div>
+        <div class='col-xs-3'>
+            <h3> Hopper </h3>
+        </div>
+        <div class='col-xs-3'>
+            <h3> Walker </h3>
+        </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-xs-3'>
+            <img style="width: 110%; height: 110%" src='img/Inv.png'>
+        </div>
+        <div class='col-xs-3'>
+            <img style="width: 110%; height: 110%" src='img/Quad_PPOESA.png'>
+        </div>
+        <div class='col-xs-3'>
+            <img style="width: 104%; height: 104%" src='img/H_PPOESA.png'>
+        </div>
+        <div class='col-xs-3'>
+            <img style="width: 104%; height: 104%" src='img/W_PPOESA.png'>
+        </div>
+    </div>
+
+    <div class='row'>
+        <div class='col-xs-3'>
+            <img style="width: 110%; height: 110%" src='img/Inv_SACESA.png'>
+        </div>
+        <div class='col-xs-3'>
+            <img style="width: 110%; height: 110%" src='img/Quad_SACESA.png'>
+        </div>
+        <div class='col-xs-3'>
+            <img style="width: 104%; height: 104%" src='img/H_SACESA.png'>
+        </div>
+        <div class='col-xs-3'>
+            <img style="width: 104%; height: 104%" src='img/W_SACESA.png'>
+        </div>
+    </div>
+</div>
+
+<div class="container sec">
+    <h2>Performance Comparison of Trained Policies in the Quadrotor Environment:</h2>
+    <div class='row' style="display: flex; justify-content: center; align-items: center;">
+        <img style="width: 60%; height: 60; margin-top: 20px;%" src='img/p.png'>
+    </div>
+</div>
+
+
+<div class="sechighlight">
+<div class="container sec" style="font-size:18px">
+  <div class="row">
+      <h2>Bibtex</h2>
+<pre style="font-size:11px; background-color: #E5E3DD">
+@inproceedings{chang2024esa,
+  title={Extremum-Seeking Action Selection for Accelerating Policy Optimization},
+  author={Chang, Ya-Chien and Gao, Sicun},
+  booktitle={2024 IEEE International Conference on Robotics and Automation (ICRA)},
+  year={2024},
+  organization={IEEE}
+}
+</pre>
+    </div>
+  </div>
+</div>
+</div>
+
+</body></html>

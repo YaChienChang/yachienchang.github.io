@@ -1,0 +1,80 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  padding: 0;
+  margin: 0;
+  font-size: 17px;
+}
+#header {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+h1 {
+  font-size: 30px;
+  font-weight: 300;
+  text-align: center;
+}
+h2 {
+  margin-top: 20px;
+  font-size: 25px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+h3 {
+    font-size: 20px;
+    font-weight: 300;
+}
+h4 {
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 10%;
+}
+h5 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 3;
+}
+
+h6 {
+    margin-top: 40px;    
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.sec {
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.tt {
+  color: #060;
+  display: inline-block;
+}
+
+#inputlayer {
+  width: 65px;
+}
+.layer {
+  width: 35px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+.actmap {
+  display: block;
+  border: 2px solid #FFF;
+}
+.sechighlight {
+  background-color: #F7F6F4;s
+}
+#footermsg {
+  color: #333;
+  margin: 20px;
+}
+#classicons {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
